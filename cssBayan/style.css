@@ -74,7 +74,6 @@ input:checked ~ .tab-title {
 .tab-title:hover > .hidden-content {
   opacity: 1;
   max-height: 22rem;
-  padding: 1rem 0;
 }
 
 input:checked ~ .tab-title > .hidden-content {
@@ -108,16 +107,13 @@ input:checked ~ .tab-title > .toggler {
     max-height: 15rem;
   }
 
-  .tab-title:hover > .hidden-content {
-    max-height: 16rem;
-    padding: 0 0;
-  }
-
   input:checked ~ .tab-title > .hidden-content {
     max-height: 16rem;
     padding-top: 1rem;
   }
 }
+
+
 
 @media screen and (max-width:550px) {
   .heading {
@@ -131,7 +127,14 @@ input:checked ~ .tab-title > .toggler {
   .tab-title {
     font-size: 1.1rem;
   }
+
+  input:checked ~ .tab-title > .hidden-content {
+    max-height: 18rem;
+    padding-top: 0.8rem;
+  }
 }
+
+
 
 @media screen and (max-width: 400px) {
   .heading {
@@ -144,19 +147,15 @@ input:checked ~ .tab-title > .toggler {
 
   .tab-title {
     font-size: 0.9rem;
+    padding: 0.3rem;
   }
 
   .content-image {
     max-height: 10rem;
   }
 
-  .tab-title:hover > .hidden-content {
-    max-height: 16rem;
-    padding: 0 0;
-  }
-
   input:checked ~ .tab-title > .hidden-content {
     max-height: 16rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
 }
