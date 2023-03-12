@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffebbb; 
+  margin: 0 auto;
+}
+
+.accordion {
+  padding-top: 3em;
+  color: blue;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 2.6rem;
+}
+
+.divider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #393e46;
+}
+
+.tab {
+  
+  font-weight: bold;
+}
+
+.tab input {
+  display: none;
+}
+
+.tab-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.hidden-content {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  width: 100%;
+  text-align: center;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.content-image {
+  max-height: 100%;
+}
+
+.accordion:hover,
+input:checked ~ .tab-title {
+  color: black;
+}
+
+.tab-title:hover > .hidden-content {
+  opacity: 1;
+  max-height: 22rem;
+}
+
+input:checked ~ .tab-title > .hidden-content {
+  opacity: 1;
+  max-height: 22rem;
+  padding-top: 1rem;
+}
+
+input:checked ~ .tab-title > .toggler {
+  transition: all 0.3s;
+  transform: rotate(45deg);
+}
+
+
+
+
+@media screen and (max-width:820px){
+  .heading {
+    font-size: 2rem;
+  }
+
+  .accordion {
+    padding-top: 1.7em;
+  }
+
+  .tab-title {
+    font-size: 1.5rem;
+  }
+
+  .content-image {
+    max-height: 15rem;
+  }
+
+  input:checked ~ .tab-title > .hidden-content {
+    max-height: 16rem;
+    padding-top: 1rem;
+  }
+}
+
+
+
+@media screen and (max-width:550px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .accordion {
+    padding-top: 1em;
+  }
+
+  .tab-title {
+    font-size: 1.1rem;
+  }
+
+  input:checked ~ .tab-title > .hidden-content {
+    max-height: 18rem;
+    padding-top: 0.8rem;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .accordion {
+    padding-top: 1em;
+  }
+
+  .tab-title {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+
+  .content-image {
+    max-height: 10rem;
+  }
+
+  input:checked ~ .tab-title > .hidden-content {
+    max-height: 16rem;
+    padding-top: 0.5rem;
+  }
+}
