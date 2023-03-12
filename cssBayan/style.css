@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ffebbb; 
+}
+
+.accordion {
+  padding-top: 3em;
+  color: blue;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 2.6rem;
+}
+
+.divider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #393e46;
+}
+
+.tab {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tab input {
+  /* display: none; */
+}
+
+.tab-title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.hidden-content {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  text-align: center;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;q
+}
+
+.content-image {
+  max-height: 20rem;
+}
+
+.accordion:hover,
+input:checked ~ .tab-title {
+  color: black;
+}
+
+.tab-title:hover > .hidden-content {
+  opacity: 1;
+  max-height: 22rem;
+  padding: 1rem 0;
+}
